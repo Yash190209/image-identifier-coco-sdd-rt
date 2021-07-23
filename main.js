@@ -25,7 +25,7 @@ function draw(){
         objectDetector.detect(video, gotResult);
         for (i=0;i<objects.length;i++){
             document.getElementById("status").innerHTML="status: Object Detected";
-            document.getElementById("objectNo").innerHTML="No. of Objects Detected are:"+objects.length;
+            document.getElementById("objectNo").innerHTML="No. of Objects Detected are:"+ objects.length;
             fill(r,g,b);
             percent=floor(objects[i].confidence*100);
             text(objects[i].label+""+percent+"%", objects[i].x+15, objects[i].y+15);
